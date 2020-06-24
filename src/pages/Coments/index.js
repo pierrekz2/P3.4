@@ -7,6 +7,7 @@ export default function Coments() {
     const postId = localStorage.getItem('postId');
     const namePost = localStorage.getItem('namePost');
     const history = useHistory();
+    
     useEffect(() => {
         api.get(`comments?postId=${postId}`).then(response => {
             setComents(response.data);
