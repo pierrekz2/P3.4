@@ -5,6 +5,9 @@
 body{
     background: #cecece;
 }
+button{
+    cursor: pointer;
+}
 .container{
     justify-content: center;
     align-self: center;
@@ -40,4 +43,26 @@ body{
     padding: 20px;
     position: relative;
     color: #ffffff;
+}
+.container .content strong {
+    margin-top: 20px;
+    position: relative;
+    color: #515151;
+    cursor: pointer;
+}
+.container .content strong:hover {
+    color: #000;
+}
+.container .content ul li .btn{
+    background: none;
+    border: none;
+    color: crimson;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.container .content ul li .btn:hover{
+    background: #ffffff;
+    color: rgb(143, 55, 73);
+    border-radius: 20px;
 }

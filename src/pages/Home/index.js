@@ -13,8 +13,9 @@ export default function Home() {
         })
     })
 
-    async function handleComents(id){
-        localStorage.setItem('postId',id)
+    async function handleComents(id,name) {
+        localStorage.setItem('postId', id)
+        localStorage.setItem('namePost',name)
         history.push('/coments')
     }
     return (
@@ -25,10 +26,11 @@ export default function Home() {
                     {
                         posts.map(post => (
                             <div>
-                            <li key={post.id} onClick={() => handleComents(post.id)}>
-                                <h1>{post.title}</h1>
-                                <p>{ post.body}</p>
-                            </li>
+                                <li key={post.id} >
+                                    <h1>{post.title}</h1>
+                                    <p>{post.body}</p>
+                                    <button className="btn" type="submit" onClick={() => handleComents(post.id,post.title)}> Ver comentarios</button>
+                                </li>
                             </div>
                         ))
                     }
