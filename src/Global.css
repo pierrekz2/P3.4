@@ -47,7 +47,7 @@ button{
 .container .content strong {
     margin-top: 20px;
     position: relative;
-    color: #515151;
+    color: #cacaca;
     cursor: pointer;
 }
 .container .content strong:hover {

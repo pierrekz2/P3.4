@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api'
-import {useHistory} from 'react-router-dom'
 
 export default function Coments() {
     const [coments, setComents] = useState([]);
-    const postId = localStorage.getItem('postId');
-    const namePost = localStorage.getItem('namePost');
-    const history = useHistory();
-    
+    const postId = localStorage.getItem('postId')
     useEffect(() => {
         api.get(`comments?postId=${postId}`).then(response => {
             setComents(response.data);
@@ -16,7 +12,7 @@ export default function Coments() {
 
     return (
         <div className="container">
-            <h1>Comentarios de {namePost}</h1>
+            <h1>Usuarios</h1>
             <div className="content">
                 <ul>
                     {
@@ -32,7 +28,6 @@ export default function Coments() {
                     }
 
                 </ul>
-                <strong onClick={() => history.push('/')}>Voltar</strong>
             </div>
         </div>
     )
